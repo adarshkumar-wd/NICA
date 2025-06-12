@@ -63,25 +63,84 @@ function ConferenceCards() {
         "Edge and Fog Computing",
       ],
     },
+    {
+      title: "Track 7: AI ESSENTIAL FOR MANAGEMENT",
+      items: [
+        "The role of AI in liquidity and market efficiency",
+        "Role of AI in designing and delivering Choice Architecture to Consumers",
+        "AI driven personalization & customer experience",
+        "Digital marketing & influencer economy in the AI age",
+        "AI and Automation: Opportunities and Challenges for Employment",
+        "Social Entrepreneurship and Digital solutions for global challenges",
+        "Startups in the age of disruption",
+      ],
+    },
+    {
+      title: "Track 8: AI IN HEALTHCARE AND HOSPITAL MANAGEMENT",
+      items: [
+        "AI-driven diagnostics and predictive analytics",
+        "AI-assisted precision medicine and personalized treatment",
+        "AI in robotic-assisted surgeries and automation",
+        "AI-powered innovations in drug discovery and development",
+        "Ethical challenges in AI-driven healthcare",
+        "Regulatory frameworks for AI in hospital management",
+        "AI and bias: Ensuring fairness in healthcare AI",
+        "AI-driven ICU monitoring and alerts",
+      ],
+    },
+    {
+      title:
+        "Track 9: Innovative Approaches to Teaching and Learning in Engineering Education with AI and ML Integration",
+      items: [
+        "AI-Driven Teaching and Learning Styles in Engineering",
+        "Blended, Online, and AI-Augmented Laboratory Learning",
+        "Curriculum Development in Engineering with Emerging Technologies",
+        "Assessment Strategies Enhanced by AI and Learning Analytics",
+        "Lifelong and Self-Directed Learning in the Era of AI",
+        "Faculty Development in AI-Powered Pedagogical Techniques",
+      ],
+    },
+    {
+      title:
+        "Track 10: Ethical, Inclusive, and Global Practices in Engineering Education in the Age of AI",
+      items: [
+        "Ethics and Responsible Use of AI in Engineering Pedagogy",
+        "Inclusion and Equity in AI-Integrated Engineering Education",
+        "Sustainability and AI for Sustainable Engineering Solutions",
+        "Globalization and the International Reach of AI in Engineering Education",
+        "Professional Practice and Industry-Linked AI Applications in Pedagogy",
+        "Quality Assurance in AI-Enhanced Engineering Education",
+      ],
+    },
   ];
 
   return (
-    <div className="p-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-      {arr.map((el, i) => (
-        <div
-          key={i}
-          className="bg-white shadow-md rounded-lg p-5 border border-gray-200 
+    <>
+      <div className="text-center mt-10 mb-6">
+        <h1 className="text-3xl font-bold text-blue-800">Conference Tracks</h1>
+        <p className="text-gray-600 text-sm mt-2 max-w-xl mx-auto">
+          Explore our diverse conference tracks covering cutting-edge topics in
+          technology, AI, healthcare, and more.
+        </p>
+      </div>
+
+      <div className="p-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        {arr.map((el, i) => (
+          <div
+            key={i}
+            className="bg-white shadow-md rounded-lg p-5 border border-gray-200 
                hover:shadow-xl hover:-translate-y-1 transform transition duration-300"
-        >
-          <h2 className="text-blue-800 font-bold text-lg mb-3">{el.title}</h2>
-          <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
-            {el.items.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+          >
+            <h2 className="text-blue-800 font-bold text-lg mb-3">{el.title}</h2>
+            <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
+              {el.items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
