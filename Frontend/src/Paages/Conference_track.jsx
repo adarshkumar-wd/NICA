@@ -1,5 +1,5 @@
 import React from "react";
-import ConferenceCards from "../components.jsx/ConferenceCards";
+import ConferenceCards from "../Components/ConferenceCards";
 
 function Conference_track() {
   return (
