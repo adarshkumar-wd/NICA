@@ -53,7 +53,7 @@ function Home() {
           
           {navContent.map((items , key) => 
             (
-              <li onClick={() => {setCurrentpage(items);  navigate(items.replace(/ /g, "-"))}} className=' text-center text-white font-semibold py-2' key={key}>{items}</li>
+              <li className=' text-center text-white font-semibold py-2' key={key}>{items}</li>
             )
           )}
         </ul>
