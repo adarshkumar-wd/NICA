@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
+import ConferenceCards from "../components.jsx/ConferenceCards";
 
 function Conference_track() {
   return (
     <>
-    
-    <nav className='text-red-500'>Hello</nav>
 
+    <ConferenceCards />
     </>
-  )
+  );
 }
 
-export default Conference_track
+export default Conference_track;
