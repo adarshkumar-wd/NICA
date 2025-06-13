@@ -1,8 +1,16 @@
 import React from "react";
 import NavBar from "../Components/NavBar";
 import RegisterButton from "../Components/RegisterButton";
+import HomeCards from "../Components/HomeCards";
 
 function Home() {
+
+  const cardData = [
+    {"Image" : "src/assets/celender.png" , "Heading" : "Data" , "Text" : "August 28-29, 2025 Thursday & Friday"},
+    {"Image" : "src/assets/venue.png" , "Heading" : "Venue" , "Text" : "Block –A, Seminar Hall NSHM Knowledge Campus, Durgapur"},
+    {"Image" : "src/assets/Mode.png" , "Heading" : "Mode" , "Text" : "Hybrid (In-person & Virtual)"}
+  ]
+
   return (
     <>
       <div className="w-full min-h-[100vh] overflow-hidden">
@@ -52,14 +60,18 @@ function Home() {
 
         </section>
 
-        <section className="w-full px-2">
+        <section className="w-full px-5 mb-8">
           <div className="w-full flex flex-col items-center justify-center gap-5">
-            <h2 className="text-[2.3rem] tracking-tight font-bold text-[#0288d1]">About The Conference</h2>
-            <p className="text-center text-[1.2rem]">The International Conference on Innovations in Human-Machine Interaction (ICIHMI-2025) aims to bring together researchers, practitioners, and industry experts to explore the latest advancements in AI and human-machine interaction technologies. This conference will focus on making AI accessible to all segments of society, showcasing innovative applications, and discussing future advancements in the field.</p>
+            <h2 className="text-[2rem] tracking-tight font-bold text-[#0288d1]">About The Conference</h2>
+            <p className="text-center text-[1rem]">The International Conference on Innovations in Human-Machine Interaction (ICIHMI-2025) aims to bring together researchers, practitioners, and industry experts to explore the latest advancements in AI and human-machine interaction technologies. This conference will focus on making AI accessible to all segments of society, showcasing innovative applications, and discussing future advancements in the field.</p>
           </div>
         </section>
 
-        
+          <section className="mt-10 w-full px-3 flex flex-col items-center gap-9 justify-center mb-10 sm:flex-row sm:flex-wrap">
+            {cardData.map((data , index) => (
+              <HomeCards key={index} data={data} />
+            ))}
+          </section>
 
       </div>
     </>
