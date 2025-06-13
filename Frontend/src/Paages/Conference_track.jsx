@@ -3,7 +3,7 @@ import ConferenceCards from "../Components/ConferenceCards";
 import NavBar from "../Components/NavBar";
 import RegisterButton from "../Components/RegisterButton";
 
-function Conference_track() {
+function Conference_track() { 
   const arr = [
     {
       title: "Track 1: AI, ML, AND DATA ANALYTICS",
