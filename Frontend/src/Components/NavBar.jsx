@@ -47,7 +47,7 @@ function NavBar() {
 
                         {navContent.map((items, key) =>
                         (
-                            <li onClick={() => { setCurrentpage(items); navigate(items.replace(/ /g, "-")) }} className={`${path === items ? "bg-orange-300" : "text-white"} text-center font-semibold py-2`} key={key}>{items}</li>
+                            <li onClick={() => {  navigate(items.replace(/ /g, "-")) }} className={`${path === items ? "bg-orange-300" : "text-white"} text-center font-semibold py-2`} key={key}>{items}</li>
                         )
                         )}
                     </ul>
