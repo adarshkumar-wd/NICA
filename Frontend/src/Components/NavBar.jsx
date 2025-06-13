@@ -32,9 +32,9 @@ function NavBar() {
     return (
         <div>
             <div className='w-full flex items-center justify-between px-3 py-4'>
-                <img src="src/assets/NSHM.jpg" alt="" className='w-1/6' />
-                <img src="src/assets/ICAILIHMI.jpg" alt="" className='w-1/4' />
-                <img src="src/assets/confab360.jpg" alt="" className='w-1/6' />
+                <img src="src/assets/NSHM.jpg" alt="" className='w-[3rem]' />
+                <img src="src/assets/ICAILIHMI.jpg" alt="" className='w-[4.8rem]' />
+                <img src="src/assets/confab360.jpg" alt="" className='w-[4rem]' />
             </div>
 
             <nav className='w-full items-center '>
@@ -47,7 +47,7 @@ function NavBar() {
 
                         {navContent.map((items, key) =>
                         (
-                            <li onClick={() => { setCurrentpage(items); navigate(items.replace(/ /g, "-")) }} className={`${path === items ? "bg-orange-300" : "text-white"} text-center font-semibold py-2`} key={key}>{items}</li>
+                            <li onClick={() => {navigate(items.replace(/ /g, "-")) }} className={`${path === items ? "bg-orange-300" : "text-white"} text-center font-semibold py-2`} key={key}>{items}</li>
                         )
                         )}
                     </ul>
