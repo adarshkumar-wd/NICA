@@ -117,7 +117,7 @@ function Conference_track() {
     },
   ];
 
-  return (
+  return ( 
     <>
       <NavBar />
       <div className="text-center mt-10 mb-6">
