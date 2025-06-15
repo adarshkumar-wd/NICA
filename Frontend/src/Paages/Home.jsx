@@ -62,7 +62,7 @@ function Home() {
 
         <section className="w-full px-5 mb-8">
           <div className="w-full flex flex-col items-center justify-center gap-5">
-            <h2 className="text-[2rem] tracking-tight font-bold text-[#0288d1]">About The Conference</h2>
+            <h2 className="text-[2rem] tracking-tight font-bold text-[#0288d1] text-center">About The Conference</h2>
             <p className="text-center text-[1rem]">The International Conference on Innovations in Human-Machine Interaction (ICIHMI-2025) aims to bring together researchers, practitioners, and industry experts to explore the latest advancements in AI and human-machine interaction technologies. This conference will focus on making AI accessible to all segments of society, showcasing innovative applications, and discussing future advancements in the field.</p>
           </div>
         </section>
