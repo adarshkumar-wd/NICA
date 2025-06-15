@@ -3,6 +3,7 @@ import NavBar from "../Components/NavBar";
 import RegisterButton from "../Components/RegisterButton";
 import HomeCards from "../Components/HomeCards";
 import FocusCard from "../Components/FocusCard";
+import Contect from "../Components/Contect";
 
 function Home() {
 
@@ -114,6 +115,21 @@ function Home() {
           </div>
 
         </section>
+
+        <div className="flex justify-center mt-6 mb-8">
+          <div className="w-[80%] bg-white py-8 px-5 rounded-full">
+            <p className="text-[1rem] font-bold tracking-tight"><span className="text-[var(--blue)]">Submission Deadline :</span>15th July 2025 </p>
+          </div>
+        </div>
+
+        <div className="flex justify-center mb-10">
+          <RegisterButton />
+        </div>
+
+
+        <footer>
+          <Contect />
+        </footer>
 
       </div>
     </>
