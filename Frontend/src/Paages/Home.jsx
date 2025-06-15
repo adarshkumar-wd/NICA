@@ -58,6 +58,11 @@ function Home() {
                   <h3>AI for All: Accessibility, Applications, and Advancements</h3>
                 </div>
 
+                <div className="absolute bottom-25 flex gap-3">
+                  <img className="w-[6rem]" src="src/assets/ICAILIHMI.jpg" alt="" />
+                  <img className="w-[6rem]" src="src/assets/confab360.jpg" alt="" />
+                </div>
+
               </div>
 
 
