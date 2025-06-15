@@ -1,11 +1,9 @@
-import React from 'react'
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useState } from "react";
+import { IoIosOptions } from "react-icons/io";
 
 function NavBar() {
+
+    const [isNavOpen, setIsNavOpen] = useState(false);
 
     const navContent = [
         "Home",
@@ -24,36 +22,35 @@ function NavBar() {
         "Review process and ethic statements"
     ]
 
-    const [isNavOpen, setIsNavOpen] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
-    const [path, setPath] = useState(location.pathname.split("/")[1].split("-").join(" ") || "Home");
-
     return (
-        <div>
-            <div className='w-full flex items-center justify-between px-3 py-4'>
-                <img src="src/assets/NSHM.jpg" alt="" className='w-[3rem]' />
-                <img src="src/assets/ICAILIHMI.jpg" alt="" className='w-[4.8rem]' />
-                <img src="src/assets/confab360.jpg" alt="" className='w-[4rem]' />
-            </div>
+        <>
+        
+            <nav className='w-full min-h-[5rem] flex items-center '>
+                <div className='relative w-full flex justify-between items-center px-7'>
 
-            <nav className='w-full items-center '>
-                <div className='w-[100%]'>
+                    <div className='w-[3rem]'>
+                        <img className='w-full h-full' src="src/assets/NSHM.jpg" alt="" />
+                    </div>
 
-                    <div className={`${isNavOpen ? "hidden" : ""} w-full text-center font-semibold bg-orange-300 m-0 py-2`}>{path}</div>
-                    <div onClick={() => setIsNavOpen(!isNavOpen)} className={`w-full flex justify-center font-bold text-2xl bg-white`}>{isNavOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}</div>
+                    <div onClick={() => setIsNavOpen(!isNavOpen)} className="">
+                        <IoIosOptions className="text-2xl font-bold text-[var(--orange)]" />
+                    </div>
 
-                    <ul className={`${isNavOpen ? "" : "hidden"} flex flex-col w-full bg-blue-500`}>
+                    <section className={`transition-all duration-[500ms] overflow-hidden ${isNavOpen ? "max-h-[600px]" : "max-h-0 hidden"} absolute top-[100%] z-10 left-0 w-[100vw] border-b-3 border-x-2 border-[var(--orange)] bg-white text-[var(--black)]`}>
+                        <ul className="w-full flex flex-col items-center py-4 font-bold gap-3">
+                            {
+                                navContent.map((items , index) => (
+                                    <li key={index}>{items}</li>
+                                ))
+                            }
+                        </ul>
+                    </section>
+                    
 
-                        {navContent.map((items, key) =>
-                        (
-                            <li onClick={() => {items === "Home" ? navigate("/") : navigate(`/${items.replace(/ /g, "-")}`) ; setPath("") }} className={`${path === items ? "bg-orange-300" : "text-white"} text-center font-semibold py-2`} key={key}>{items}</li>
-                        )
-                        )}
-                    </ul>
                 </div>
             </nav>
-        </div>
+        
+        </>
     )
 }
 
