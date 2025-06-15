@@ -132,7 +132,7 @@ function Conference_track() {
 
       <div className="p-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {arr.map((el, i) => (
-          <ConferenceCards i={i} el={el} />
+          <ConferenceCards i={i} el={el} key={i} />
         ))}
       </div>
     </>
