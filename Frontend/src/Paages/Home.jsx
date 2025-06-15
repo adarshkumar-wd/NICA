@@ -59,8 +59,15 @@ function Home() {
                 </div>
 
                 <div className="absolute bottom-25 flex gap-3">
-                  <img className="w-[6rem]" src="src/assets/ICAILIHMI.jpg" alt="" />
-                  <img className="w-[6rem]" src="src/assets/confab360.jpg" alt="" />
+
+                  <div className="w-[5rem]">
+                    <img className="w-full h-full object-contain" src="src/assets/ICAILIHMI.jpg" alt="" />
+                  </div>
+
+                  <div className="w-[5rem]">
+                    <img className="w-full h-full object-contain" src="src/assets/confab360.jpg" alt="" />
+                  </div>
+
                 </div>
 
               </div>
