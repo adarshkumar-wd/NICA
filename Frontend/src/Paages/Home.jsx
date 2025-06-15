@@ -6,51 +6,42 @@ import HomeCards from "../Components/HomeCards";
 function Home() {
 
   const cardData = [
-    {"Image" : "src/assets/celender.png" , "Heading" : "Data" , "Text" : "August 28-29, 2025 Thursday & Friday"},
-    {"Image" : "src/assets/venue.png" , "Heading" : "Venue" , "Text" : "Block –A, Seminar Hall NSHM Knowledge Campus, Durgapur"},
-    {"Image" : "src/assets/Mode.png" , "Heading" : "Mode" , "Text" : "Hybrid (In-person & Virtual)"}
+    { "Image": "src/assets/celender.png", "Heading": "Data", "Text": "August 28-29, 2025 Thursday & Friday" },
+    { "Image": "src/assets/venue.png", "Heading": "Venue", "Text": "Block –A, Seminar Hall NSHM Knowledge Campus, Durgapur" },
+    { "Image": "src/assets/Mode.png", "Heading": "Mode", "Text": "Hybrid (In-person & Virtual)" }
   ]
 
   return (
     <>
-      <div className="w-full min-h-[100vh] overflow-hidden">
+      <div className="w-[100vw] min-h-[100vh] overflow-hidden">
         <NavBar />
 
         {/* Hero Section */}
 
-        <section className='w-full h-[40rem] px-2 mb-[3rem]'>
+        <section className='w-full h-[75vh] z-10 mb-[3rem]'>
 
-          <div className="bg-[url('src/assets/NSHM_Campus.jpg')] h-full bg-cover bg-center relative">
-            <div className='w-full h-full absolute top-0 left-0 bg-black/65 text-white text-center flex items-center justify-center'>
+          <div className="bg-[url('src/assets/Home-Page-Banner-Mob.png')] h-full bg-cover bg-center relative">
+            <div className='w-full h-full absolute top-0 left-0 text-white flex items-center justify-center'>
 
-              <div className='px-2'>
+              <div className="w-[90%] h-full pl-3 py-8 relative">
 
-                <div className='text-[1.9rem] tracking-tight leading-7 font-bold mb-5'>
-                  <p>International Conference on Innovations in Human-Machine Interaction</p>
+                <div className="text-[1.6rem] italic leading-8 text-[var(--orange)] mb-4">
+                  <h3>International Conference on</h3>
                 </div>
 
-                <div className='text-[2.3rem] font-bold text-[#4FC3F7] mb-4'>
-                  <p>ICIHMI-2025</p>
+                <div className="text-[1.5rem] font-bold tracking-tight leading-7 mb-5">
+                  <h3>Artificial Intelligence lead innovations in Human-Machine Interaction -2025</h3>
                 </div>
 
-                <div className='text-[1.5rem] leading-6 mb-5'>
-                  <p>AI for All: Accessibility, Applications, and Advancements</p>
-                </div>
-
-                <div className='text-[2rem] font-bold text-[#4FC3F7]'>
-                  <p>Organized By</p>
-                </div>
-
-                <div className='text-[1.3rem]'>
-                  <p>NSHM Institute of Computing and Analytics (NICA)</p>
-                </div>
-
-                <div className='text-[1.3rem] mb-5 '>
-                  <p>NSHM Knowledge Campus, Durgapur</p>
+                <div className="italic text-[1.3rem] mb-4">
+                  <h3>[ICAILHMI-2025]</h3>
                 </div>
 
                 <RegisterButton />
 
+                <div className="absolute bottom-10">
+                  <h3>AI for All: Accessibility, Applications, and Advancements</h3>
+                </div>
 
               </div>
 
@@ -60,6 +51,8 @@ function Home() {
 
         </section>
 
+        {/* About Section  */}
+
         <section className="w-full px-5 mb-8">
           <div className="w-full flex flex-col items-center justify-center gap-5">
             <h2 className="text-[2rem] tracking-tight font-bold text-[#0288d1] text-center">About The Conference</h2>
@@ -67,11 +60,11 @@ function Home() {
           </div>
         </section>
 
-          <section className="mt-10 w-full px-3 flex flex-col items-center gap-9 justify-center mb-10 sm:flex-row sm:flex-wrap">
-            {cardData.map((data , index) => (
-              <HomeCards key={index} data={data} />
-            ))}
-          </section>
+        <section className="mt-10 w-full px-3 flex flex-col items-center gap-9 justify-center mb-10 sm:flex-row sm:flex-wrap">
+          {cardData.map((data, index) => (
+            <HomeCards key={index} data={data} />
+          ))}
+        </section>
 
       </div>
     </>

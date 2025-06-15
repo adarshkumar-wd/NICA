@@ -44,8 +44,8 @@ function NavBar() {
     return (
         <>
 
-            <nav className='w-full min-h-[5rem] flex items-center '>
-                <div className='relative w-full flex justify-between items-center px-7'>
+            <nav className='w-[100vw] min-h-[5rem] flex items-center mb-3'>
+                <div className='relative w-full flex justify-between items-center px-7 '>
 
                     <div className='w-[3rem]'>
                         <img className='w-full h-full' src="src/assets/NSHM.jpg" alt="" />

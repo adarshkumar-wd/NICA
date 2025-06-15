@@ -2,8 +2,8 @@ import React from "react";
 
 function RegisterButton() {
   return (
-    <div className="flex justify-center items-center">
-      <button className="text-white text-2xl semi-bold bg-[#0288d1] px-5 py-3 rounded-md hover:bg-[#078ee8] cursor-pointer ">
+    <div className="flex">
+      <button className="text-white text-[1rem] semi-bold bg-[var(--orange)] px-5 py-[.4rem] rounded-full cursor-pointer ">
         Register Now
       </button>
     </div>
