@@ -11,6 +11,7 @@
   --grey2: #615d5d;
   --black: #000000;
   --cream: rgb(236, 233, 227);
+  --deepgray: var(--color-gray-700)
 }
 
 @theme {
