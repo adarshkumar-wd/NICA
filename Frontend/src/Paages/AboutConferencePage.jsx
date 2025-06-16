@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../Components/NavBar";
+import Contect from "../Components/Contect";
 
 function AboutConferencePage() {
   return (
@@ -129,7 +130,7 @@ function AboutConferencePage() {
           <div className="flex md:justify-evenly md:flex-row flex-col gap-6 mt-12 md:mt-16">
             <div className="flex justify-evenly w-full">
               {/* First Circle */}
-              <div className="w-25 h-25 rounded-full border-2 border-orange-500 overflow-hidden">
+              <div className="w-25 h-25 rounded-full border-2 border-[var(--orange)] overflow-hidden">
                 <img
                   src="../src/assets/IMG-20250610-WA0006.jpg"
                   alt="Logo 1"
@@ -138,7 +139,7 @@ function AboutConferencePage() {
               </div>
 
               {/* Second Circle */}
-              <div className="w-25 h-25 rounded-full border-2 border-orange-500 overflow-hidden">
+              <div className="w-25 h-25 rounded-full border-2 border-[var(--orange)] overflow-hidden">
                 <img
                   src="../src/assets/IMG-20250610-WA0006.jpg"
                   alt="Logo 1"
@@ -147,7 +148,7 @@ function AboutConferencePage() {
               </div>
 
               {/* Third Circle */}
-              <div className="w-25 h-25 rounded-full border-2 border-orange-500 overflow-hidden">
+              <div className="w-25 h-25 rounded-full border-2 border-[var(--orange)] overflow-hidden">
                 <img
                   src="../src/assets/IMG-20250610-WA0006.jpg"
                   alt="Logo 1"
@@ -156,7 +157,7 @@ function AboutConferencePage() {
               </div>
 
               {/* Fourth Circle */}
-              <div className="w-25 h-25 rounded-full border-2 border-orange-500 overflow-hidden hidden md:inline-block">
+              <div className="w-25 h-25 rounded-full border-2 border-[var(--orange)] overflow-hidden hidden md:inline-block">
                 <img
                   src="../src/assets/IMG-20250610-WA0006.jpg"
                   alt="Logo 1"
@@ -165,7 +166,7 @@ function AboutConferencePage() {
               </div>
 
               {/* Fifth Circle */}
-              <div className="w-25 h-25 rounded-full border-2 border-orange-500 overflow-hidden hidden md:inline-block">
+              <div className="w-25 h-25 rounded-full border-2 border-[var(--orange)] overflow-hidden hidden md:inline-block">
                 <img
                   src="../src/assets/IMG-20250610-WA0006.jpg"
                   alt="Logo 1"
@@ -176,7 +177,7 @@ function AboutConferencePage() {
 
             <div className="flex justify-evenly md:hidden">
               {/* Fourth Circle */}
-              <div className="w-25 h-25 rounded-full border-2 border-orange-500 overflow-hidden">
+              <div className="w-25 h-25 rounded-full border-2 border-[var(--orange)] overflow-hidden">
                 <img
                   src="../src/assets/IMG-20250610-WA0006.jpg"
                   alt="Logo 1"
@@ -185,7 +186,7 @@ function AboutConferencePage() {
               </div>
 
               {/* Fifth Circle */}
-              <div className="w-25 h-25 rounded-full border-2 border-orange-500 overflow-hidden">
+              <div className="w-25 h-25 rounded-full border-2 border-[var(--orange)] overflow-hidden">
                 <img
                   src="../src/assets/IMG-20250610-WA0006.jpg"
                   alt="Logo 1"
@@ -196,7 +197,30 @@ function AboutConferencePage() {
           </div>
         </section>
 
-        
+        <section className="text-center py-10 px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--blue)] mb-3">
+            About United Kingdom-Bangladesh Research Centre
+          </h2>
+          <p className="max-w-6xl mx-auto text-justify text-[var(--deepgray)]">
+            The UK-Bangladesh Research Centre (UKBRC) is an academic initiative
+            that promotes collaboration between the UK, Bangladesh and other
+            nations with special attention for developing economies in research,
+            education, and innovation. We support joint research, student and
+            faculty exchanges, and capacity-building across institutions.
+            Focused on global and regional challenges, UKBRC fosters
+            partnerships between academia, industry, and policy sectors to
+            encourage impactful, ethical, and sustainable research. Through
+            conferences, fellowships, and a digital knowledge hub, we aim to
+            create lasting academic connections and real-world solutions.
+          </p>
+          {/* Flags */}
+          <div className="flex justify-center gap-4 mt-6">
+            <div className="w-16 h-10 bg-gray-300 rounded shadow" />
+            <div className="w-16 h-10 bg-gray-300 rounded shadow" />
+          </div>
+        </section>
+
+        <Contect />
       </div>
     </>
   );
