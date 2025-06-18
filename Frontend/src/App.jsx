@@ -4,10 +4,11 @@ import Home from "./Paages/Home";
 import Conference_track from "./Paages/Conference_track";
 import ProgramCommittee from "./Paages/ProgramCommittee";
 import AboutConferencePage from "./Paages/AboutConferencePage";
+import KeynoteSpeakerPage from "./Paages/KeynoteSpeakerPage";
 
 function App() {
   return (
-    <div className="bg-[var(--cream)]">
+    <div className="bg-[var(--cream)] overflow-hidden">
       <Routes>
       <Route path="/" element={<Home />} />
       <Route
@@ -16,6 +17,7 @@ function App() {
       />
       <Route path="/Program-Committee" element={<ProgramCommittee />} />
       <Route path="/about-conference" element ={<AboutConferencePage/>} />
+      <Route path="/Keynote-Speakers" element ={<KeynoteSpeakerPage/>} />
     </Routes>
     </div>
   );
