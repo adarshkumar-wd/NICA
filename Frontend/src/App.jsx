@@ -7,7 +7,8 @@ import AboutConferencePage from "./Paages/AboutConferencePage";
 
 function App() {
   return (
-    <Routes>
+    <div className="bg-[var(--cream)]">
+      <Routes>
       <Route path="/" element={<Home />} />
       <Route
         path="/Conference-Tracks-and-Sessions"
@@ -16,6 +17,7 @@ function App() {
       <Route path="/Program-Committee" element={<ProgramCommittee />} />
       <Route path="/about-conference" element ={<AboutConferencePage/>} />
     </Routes>
+    </div>
   );
 }
 
