@@ -1,14 +1,16 @@
 import React from "react";
 import NavBar from "../Components/NavBar";
 import Contect from "../Components/Contect";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 function AboutConferencePage() {
   return (
     <>
       <NavBar />
 
-      <div className="text-center py-7 px-4  text-white bg-[var(--orange)]">
-        <h1 className="text-4xl md:text-5xl font-extrabold">
+      <div className="text-center py-7 px-4  text-[var(--cream)] bg-[var(--orange)]">
+        <h1 className="text-3xl md:text-5xl font-extrabold">
           Know the Conference & Organizers
         </h1>
 
@@ -18,14 +20,14 @@ function AboutConferencePage() {
         </p>
       </div>
 
-      <div className="bg-[var(--cream)] text-[#333] font-sans">
+      <div className="bg-[var(--cream)] text-[var(--deepgray)] font-sans">
         {/* About NSHM Knowledge Campus */}
 
         <section className="text-center py-10 px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-cyan-700 mb-8 ">
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--blue)] mb-8 ">
             About NSHM Knowledge Campus
           </h2>
-          <p className="max-w-6xl mx-auto text-justify text-gray-700">
+          <p className="max-w-6xl mx-auto text-justify ">
             NSHM Knowledge Campus, Durgapur, is a renowned educational
             institution in India that has been shaping young minds since its
             establishment in 1996. Situated on a sprawling 32-acre campus, this
@@ -40,26 +42,45 @@ function AboutConferencePage() {
             to foster holistic development, both academically and
             professionally, through its comprehensive programs.
           </p>
-          <div className="w-full max-w-6xl h-100 bg-[var(--orange)] mx-auto mt-6 rounded-lg "></div>
+
+          <div className="w-full max-w-6xl mx-auto mt-6 rounded-lg ">
+            <Carousel
+              autoPlay
+              infiniteLoop
+              showThumbs={false}
+              showStatus={false}
+              className="max-w-4xl mx-auto mt-6"
+            >
+              <div>
+                <img src="src\assets\NSHM_Campus.jpg" alt="Slide 1" />
+              </div>
+              <div>
+                <img src="src\assets\NSHM_Campus.jpg" alt="Slide 2" />
+              </div>
+              <div>
+                <img src="src\assets\NSHM_Campus.jpg" alt="Slide 3" />
+              </div>
+            </Carousel>
+          </div>
         </section>
 
         {/* About NICA */}
         <section className="py-10 px-4">
           <h2
-            className="text-2xl md:text-3xl font-bold text-cyan-700 mb-8
+            className="text-2xl md:text-3xl font-bold text-[var(--blue)] mb-8
            text-center"
           >
             About NICA
           </h2>
 
           <div className=" text-justify max-w-6xl flex flex-col md:flex-row items-center justify-center gap-16 mx-auto">
-            <p className="md:w-1/2 text-gray-700">
+            <p className="md:w-1/2 ">
               The NSHM Institute of Computing and Analytics (NICA), under NSHM
               Knowledge Campus, Durgapur, is a hub of academic excellence in
               Computing and Analytics. With a team of highly qualified faculty,
               NICA offers industry-aligned, future-ready programs that blend
               strong academic foundations with real-world applications,
-              preparing students for the evolving Industry 5.0 landscape. NICA’s
+              preparing students for the evolving Industry 5.0 landscape. NICA's
               ecosystem emphasizes a balance between theory and practical skills
               through immersive learning experiences like industry projects,
               internships, and live case studies. The institute fosters a strong
@@ -87,7 +108,7 @@ function AboutConferencePage() {
         {/* About Confab 360 Degree */}
         <section className="py-10 px-4">
           <h2
-            className="text-2xl md:text-3xl font-bold text-cyan-700 mb-8
+            className="text-2xl md:text-3xl font-bold text-[var(--blue)] mb-8
            text-center"
           >
             About Confab 360 Degree
@@ -103,7 +124,7 @@ function AboutConferencePage() {
               />
             </div>
 
-            <p className="md:w-1/2 text-gray-700 ">
+            <p className="md:w-1/2 ">
               Confab 360 Degree is a globally recognized educational and
               research platform headquartered in New Delhi, India. Established
               in 2021, the organization is dedicated to bridge the gap between
@@ -198,26 +219,116 @@ function AboutConferencePage() {
         </section>
 
         <section className="text-center py-10 px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-[var(--blue)] mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--blue)] mb-6">
             About United Kingdom-Bangladesh Research Centre
           </h2>
-          <p className="max-w-6xl mx-auto text-justify text-[var(--deepgray)]">
-            The UK-Bangladesh Research Centre (UKBRC) is an academic initiative
-            that promotes collaboration between the UK, Bangladesh and other
-            nations with special attention for developing economies in research,
-            education, and innovation. We support joint research, student and
-            faculty exchanges, and capacity-building across institutions.
-            Focused on global and regional challenges, UKBRC fosters
-            partnerships between academia, industry, and policy sectors to
-            encourage impactful, ethical, and sustainable research. Through
-            conferences, fellowships, and a digital knowledge hub, we aim to
-            create lasting academic connections and real-world solutions.
-          </p>
-          {/* Flags */}
-          <div className="flex justify-center gap-4 mt-6">
-            <div className="w-16 h-10 bg-gray-300 rounded shadow" />
-            <div className="w-16 h-10 bg-gray-300 rounded shadow" />
+
+          {/* Flex Container */}
+          <div className="flex flex-col md:flex-row max-w-6xl mx-auto bg-[var(--light)] p-4 gap-6">
+            {/* Text Content - 70% */}
+            <div className="md:basis-[70%] text-justify">
+              <p>
+                The UK-Bangladesh Research Centre (UKBRC) is an academic
+                initiative that promotes collaboration between the UK,
+                Bangladesh and other nations with special attention for
+                developing economies in research, education, and innovation. We
+                support joint research, student and faculty exchanges, and
+                capacity-building across institutions. Focused on global and
+                regional challenges, UKBRC fosters partnerships between
+                academia, industry, and policy sectors to encourage impactful,
+                ethical, and sustainable research. Through conferences,
+                fellowships, and a digital knowledge hub, we aim to create
+                lasting academic connections and real-world solutions.
+              </p>
+            </div>
+
+            {/* Flags - 30% */}
+            <div className="md:basis-[30%] flex justify-center items-center gap-4">
+              <div className="w-25 h-20 bg-gray-300 rounded shadow" />
+              <div className="w-25 h-20 bg-gray-300 rounded shadow" />
+            </div>
           </div>
+        </section>
+
+        {/* Conference Purpose Section */}
+        <section className="text-center py-10 px-4">
+          <h2 className="text-xl md:text-2xl font-bold text-[var(--blue)] mb-2">
+            Conference Purpose
+          </h2>
+
+          <p className="max-w-6xl mx-auto ">
+            To provide a dynamic platform for scholars, researchers,
+            technologists, and industry leaders to explore cutting-edge
+            developments in Artificial Intelligence and its role in transforming
+            Human-Machine Interaction (HMI)
+          </p>
+        </section>
+
+        {/* Objective Section */}
+        <section className="text-center py-10 px-4">
+          <h2 className="text-xl md:text-2xl font-bold text-[var(--blue)] mb-6">
+            Objective of the Conference
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4 max-w-6xl mx-auto">
+            {/* Box 1 */}
+            <div className="h-32 rounded-lg overflow-hidden shadow">
+              <img
+                src="../src/assets/NSHM_Campus.jpg"
+                alt="Objective 1"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Box 2 */}
+            <div className="h-32 rounded-lg overflow-hidden shadow">
+              <img
+                src="../src/assets/NSHM_Campus.jpg"
+                alt="Objective 2"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Box 3 */}
+            <div className="h-32 rounded-lg overflow-hidden shadow">
+              <img
+                src="../src/assets/NSHM_Campus.jpg"
+                alt="Objective 3"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Box 4 */}
+            <div className="h-32 rounded-lg overflow-hidden shadow">
+              <img
+                src="../src/assets/NSHM_Campus.jpg"
+                alt="Objective 4"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Box 5 */}
+            <div className="h-32 rounded-lg overflow-hidden shadow">
+              <img
+                src="../src/assets/NSHM_Campus.jpg"
+                alt="Objective 5"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Box 6 */}
+            <div className="h-32 rounded-lg overflow-hidden shadow">
+              <img
+                src="../src/assets/NSHM_Campus.jpg"
+                alt="Objective 6"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <button className="mt-6 bg-orange-500 text-[var(--grey1)] px-6 py-2 rounded hover:bg-[var(--orange)]">
+            Explore Committee
+          </button>
         </section>
 
         <Contect />

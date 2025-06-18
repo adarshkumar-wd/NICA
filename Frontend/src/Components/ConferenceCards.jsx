@@ -6,7 +6,7 @@ function ConferenceCards(props) {
   return (
     <div
             key={props.i}
-            className="bg-white shadow-md rounded-lg p-5 border border-gray-200 
+            className="bg-white shadow-md rounded-lg p-5 border border-[var(--orange)]
                hover:shadow-xl hover:-translate-y-1 transform transition duration-300"
           >
             <h2 className="text-blue-800 font-bold text-lg mb-3">{props.el.title}</h2>
