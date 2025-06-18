@@ -15,27 +15,38 @@ function ProgramCommittee() {
     "Mr. Joydeep Banerjee, HoD, Assistant Professor, NSHM Institute of Computing & Analytics, Durgapur",
     "Mr. Sakya Sarkar, Assistant Professor, NSHM Institute of Computing & Analytics, Durgapur",
     "Mr. Triloki Nath, Assistant Professor, NSHM Institute of Computing & Analytics, Durgapur",
-    "Mr. Sudip Chatterjee, Assistant Professor, NSHM Institute of Computing & Analytics, Durgapur",
+    "Mr. Sudip Chatterjee, Assistant Professor, NSHM Institute of Computing & Analytics, Durgapur",
   ];
 
   return (
     <>
       <NavBar />
 
-      <div className="flex flex-col items-center mt-4">
-        <h2 className="text-2xl font-bold text-blue-800 mb-4">
-          Program Committee Members
+      <section className="py-10 px-4 bg-[#fef7f1]">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-[var(--blue)] mb-6">
+          Program Committee
         </h2>
-        {committee.map((name, index) => (
-          <div
-          key={index}
-            className={`px-6 py-4 text-black w-full rounded-sm
-                  ${index % 2=== 0 ? "bg-[#b9d2f1]" : "bg-orange-100"}`}
-          >
-            {name}
-          </div>
-        ))}
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto text-[var(--deepgray)]">
+          {committee.map((member, index) => {
+            const [name, ...rest] = member.split(",");
+            const title = rest.join(",").trim();
+
+            const isLast = index === committee.length - 1;
+
+            return (
+              <div
+                key={index}
+                className={`bg-[#ffd6b4] px-6 py-4 rounded-md text-center ${
+                  isLast ? "lg:col-start-2" : ""
+                }`}
+              >
+                <h3 className="font-bold text-lg">{name}</h3>
+                <p className="text-sm">{title}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
     </>
   );
 }
