@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../Components/NavBar";
+import Contect from "../Components/Contect";
 
 function ProgramCommittee() {
   const committee = [
@@ -22,7 +23,7 @@ function ProgramCommittee() {
     <>
       <NavBar />
 
-      <section className="py-10 px-4 bg-[#fef7f1]">
+      <section className="py-10 px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-[var(--blue)] mb-6">
           Program Committee
         </h2>
@@ -47,6 +48,7 @@ function ProgramCommittee() {
           })}
         </div>
       </section>
+      <Contect />
     </>
   );
 }
